@@ -1,6 +1,6 @@
 import { Search, Mic, MapPin, CheckCircle2, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import Profile from "../assets/profile.png"
+import Profile from "../assets/Profile.png"
 import party from "../assets/party.png"
 import drinking from "../assets/drinking.png"
 import friends from "../assets/friends.png"
