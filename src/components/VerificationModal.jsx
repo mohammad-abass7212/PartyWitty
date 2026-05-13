@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2, ShieldCheck, Camera, Sun, RefreshCcw, Sparkles, Trash2, Users, Copy, Plus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
+import FaceScan from "../assets/FaceScan.png"
 const VerificationModal = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
   const [step, setStep] = useState('intro'); // intro, scan, verified, photos
@@ -50,14 +50,14 @@ const VerificationModal = ({ isOpen, onClose }) => {
         </div>
       </div>
 
-      <button 
+      <button
         onClick={() => setStep('scan')}
         className="primary-btn"
         style={{ marginBottom: '20px', padding: '18px' }}
       >
         Verify & Send Invite
       </button>
-      
+
       <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: '700', letterSpacing: '1px', textAlign: 'center' }}>
         TAKES LESS THAN 30 SECONDS
       </div>
@@ -66,18 +66,18 @@ const VerificationModal = ({ isOpen, onClose }) => {
 
   const renderScan = () => (
     <div style={{ position: 'relative', width: '100%', height: '540px', borderRadius: '24px', overflow: 'hidden', background: '#000' }}>
-      <img 
-        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800" 
-        alt="Face Scan" 
+      <img
+        src={FaceScan}
+        alt="Face Scan"
         style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }}
       />
-      
+
       {/* Face Guide Overlay */}
       <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ width: '260px', height: '340px', border: '3px solid rgba(255,255,255,0.6)', borderRadius: '130px', position: 'relative' }}>
           <div style={{ position: 'absolute', top: '-3px', left: '50%', transform: 'translateX(-50%)', width: '24px', height: '6px', background: 'white', borderRadius: '3px' }} />
           <div style={{ position: 'absolute', bottom: '-3px', left: '50%', transform: 'translateX(-50%)', width: '24px', height: '6px', background: 'white', borderRadius: '3px' }} />
-          
+
           <div style={{ position: 'absolute', top: '48px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(255,255,255,0.25)', backdropFilter: 'blur(12px)', color: 'white', padding: '10px 20px', borderRadius: '9999px', fontSize: '15px', fontWeight: '600', whiteSpace: 'nowrap' }}>
             Look straight
           </div>
@@ -87,7 +87,7 @@ const VerificationModal = ({ isOpen, onClose }) => {
       <div style={{ position: 'absolute', bottom: '120px', left: '0', right: '0', textAlign: 'center', color: 'white' }}>
         <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>Keep your face within the frame</h3>
         <p style={{ fontSize: '14px', opacity: 0.9, fontWeight: '500' }}>Center your face and wait for the scan to start</p>
-        
+
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)', padding: '10px 20px', borderRadius: '9999px', marginTop: '20px', fontSize: '13px', fontWeight: '600' }}>
           <ShieldCheck size={18} /> Used only for verification
         </div>
@@ -97,7 +97,7 @@ const VerificationModal = ({ isOpen, onClose }) => {
         <button style={{ width: '56px', height: '56px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', transition: 'background 0.2s' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'} onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
           <RefreshCcw size={24} />
         </button>
-        <button 
+        <button
           onClick={() => setStep('verified')}
           style={{ width: '72px', height: '72px', borderRadius: '50%', border: '4px solid white', background: 'transparent', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.2s' }}
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
@@ -142,7 +142,7 @@ const VerificationModal = ({ isOpen, onClose }) => {
         <div style={{ fontSize: '13px', color: 'var(--verified-purple)', fontWeight: '700', letterSpacing: '1px' }}>IDENTITY MATCH 98.4%</div>
       </div>
 
-      <button 
+      <button
         onClick={() => setStep('photos')}
         style={{ width: '100%', padding: '18px', background: 'var(--verified-purple)', color: 'white', borderRadius: '9999px', fontSize: '18px', fontWeight: '700', marginBottom: '20px', boxShadow: '0 8px 24px rgba(124, 77, 255, 0.3)', transition: 'transform 0.2s' }}
         onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
@@ -178,7 +178,7 @@ const VerificationModal = ({ isOpen, onClose }) => {
           </div>
           <span style={{ fontSize: '14px', fontWeight: '600' }}>+ Add Photo</span>
         </div>
-        
+
         <div style={{ aspectRatio: '3/4', borderRadius: '20px', overflow: 'hidden', position: 'relative' }}>
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="Vibe 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <button style={{ position: 'absolute', bottom: '12px', left: '12px', background: '#EF4444', color: 'white', width: '32px', height: '32px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid white' }}>
@@ -216,8 +216,8 @@ const VerificationModal = ({ isOpen, onClose }) => {
           <span style={{ fontSize: '13px', fontWeight: '500' }}>Candid posed</span>
         </div>
       </div>
-      
-      <button 
+
+      <button
         onClick={() => { onClose(); navigate('/'); }}
         className="secondary-btn"
         style={{ width: '100%', padding: '18px' }}
@@ -230,7 +230,7 @@ const VerificationModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content" style={{ position: 'relative', padding: step === 'scan' ? '24px' : '48px', maxWidth: step === 'photos' ? '640px' : '520px' }}>
-        <button 
+        <button
           onClick={onClose}
           style={{ position: 'absolute', top: '24px', right: '24px', background: '#F4F4F5', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', zIndex: 10, transition: 'background 0.2s' }}
           onMouseEnter={(e) => e.currentTarget.style.background = '#E4E4E7'}
@@ -238,7 +238,7 @@ const VerificationModal = ({ isOpen, onClose }) => {
         >
           <X size={24} />
         </button>
-        
+
         {step !== 'intro' && (
           <div style={{ position: 'absolute', top: '32px', left: '32px', fontSize: '15px', fontWeight: '600', color: 'var(--text-muted)', zIndex: 10 }}>
             Verification Success
