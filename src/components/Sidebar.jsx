@@ -14,6 +14,7 @@ import {
 import Profile from "../assets/Profile.png"
 import logo from "../assets/logo.png"
 import logo2 from "../assets/logo2.png"
+import subscription from "../assets/subscription.png"
 
 const SidebarToggleIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -101,16 +102,11 @@ const Sidebar = () => {
           <span className="nav-label" style={{ fontSize: '15px', fontWeight: '600' }}>More</span>
         </div>
 
-        <div className="offer-banner" style={{ background: '#111827', color: 'white', padding: '16px', borderRadius: '16px', marginTop: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ color: '#FBBF24', fontSize: '11px', fontWeight: '700', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '6px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>
-            <span style={{ fontSize: '16px' }}>👑</span> Corporate Employee Offer
-          </div>
-          <div style={{ fontSize: '14px', fontWeight: '600', color: '#FBBF24' }}>
-            <span style={{ color: 'white' }}>1 Month For </span>₹1
-          </div>
+        <div className="offer-banner" style={{ borderRadius: '16px', position: 'relative', overflow: 'hidden' }}>
+          <img src={subscription} alt="" />
         </div>
 
-        <div className="user-profile-mini" style={{ justifyContent: isCollapsed ? 'center' : 'flex-start', marginTop: '16px', position: 'relative', display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div className="user-profile-mini" style={{ justifyContent: isCollapsed ? 'center' : 'flex-start', position: 'relative', display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ position: 'relative', flexShrink: 0 }}>
             <img src={Profile} alt="Zeeshan" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
             <div className="crown-badge" style={{ position: 'absolute', top: '-6px', left: '-6px', background: '#111827', borderRadius: '50%', padding: '2px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
