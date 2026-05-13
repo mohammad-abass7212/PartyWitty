@@ -11,7 +11,7 @@ import {
   Wallet,
   ArrowUpRight
 } from 'lucide-react';
-import Profile from "../assets/profile.png"
+import Profile from "../assets/Profile.png"
 import logo from "../assets/logo.png"
 import logo2 from "../assets/logo2.png"
 

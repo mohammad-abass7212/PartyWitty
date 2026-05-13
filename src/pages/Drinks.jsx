@@ -1,7 +1,7 @@
 import { MapPin, Clock, Edit2, Hand, Flower2, Gift, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Profile from "../assets/Profile.png"
-import Miller from "../assets/feed.png"
+
 import zoya from "../assets/zoya.png"
 import hotel from "../assets/hotel.png"
 import bar from "../assets/bar.png"

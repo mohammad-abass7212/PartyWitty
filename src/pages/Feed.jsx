@@ -1,7 +1,7 @@
 import { X, Heart, Eye, Flame, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Miller from "../assets/feed.png"
-import Profile from "../assets/profile.png"
+import Profile from "../assets/Profile.png"
 import lemonJuice from "../assets/lemonJuice.png"
 const Feed = () => {
   const navigate = useNavigate();
